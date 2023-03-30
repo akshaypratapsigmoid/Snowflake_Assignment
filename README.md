@@ -120,6 +120,7 @@ SELECT * FROM RAW_VARIANT;
 
 ### Output:
 <img width="1118" alt="Screenshot 2023-03-29 at 11 09 09 PM" src="https://user-images.githubusercontent.com/122514456/228622543-b76bd592-9047-4640-908c-2d528bf0f70e.png">
+<img width="1280" alt="7 ---2" src="https://user-images.githubusercontent.com/123646244/228774632-628cad0f-a882-4b37-8ea3-d97fa8a6d573.png">
 
 <img width="1117" alt="Screenshot 2023-03-29 at 11 38 25 PM" src="https://user-images.githubusercontent.com/122514456/228629258-85c0efb9-0aa8-404d-8ce0-d6b1ec98613d.png">
 
@@ -160,6 +161,7 @@ put file:///Users/akshay/Documents/employee1.csv @my_internal_stage;
 ```
 
 ### Output:
+<img width="1162" alt="8--- 1" src="https://user-images.githubusercontent.com/123646244/228774718-9aeb2e18-73c4-44a3-b833-99934fb9bb4e.png">
 
 <img width="1159" alt="Screenshot 2023-03-30 at 12 04 45 AM" src="https://user-images.githubusercontent.com/122514456/228635285-46110b8b-6211-4ca5-8597-213322f8989e.png">
 
@@ -205,7 +207,10 @@ copy into EXTERNAL_S3_STAGING_EMPLOYEE(id, firstname, lastname, email, ssn, dept
     from (SELECT emp.$1, emp.$2, emp.$3, emp.$4, emp.$5, emp.$6, emp.$7,emp.$8, METADATA$FILENAME FROM
           @my_s3_stage/employee1.csv (file_format => my_csv_format) emp);
 ```
+### Output
 
+<img width="1280" alt="9--1" src="https://user-images.githubusercontent.com/123646244/228774782-0a7daa2b-4363-4bef-a01e-62ee120970b5.png">
+<img width="1280" alt="9--2" src="https://user-images.githubusercontent.com/123646244/228774834-132aba0a-591f-4f1e-bbbc-ce60f251b7d8.png">
 
 
 ### 10. Upload any parquet file to the stage location and infer the schema of the file.
@@ -227,6 +232,8 @@ SELECT * FROM TABLE(
 ```
 
 ### Output:
+
+<img width="1280" alt="10---1" src="https://user-images.githubusercontent.com/123646244/228774942-888b16f1-4c6f-45da-84df-6835ce05d9d2.png">
 
 <img width="1119" alt="Screenshot 2023-03-30 at 12 24 58 AM" src="https://user-images.githubusercontent.com/122514456/228639810-0e6f941c-69fb-4258-9514-b51a1abe4e1a.png">
 
