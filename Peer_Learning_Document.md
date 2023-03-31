@@ -59,7 +59,7 @@ USE ROLE ADMIN ;
 ### Q4 Create a database assignment_db ( 5 ).
 
 ```
-grant create database on account to role admin; -- I ran this command from accountadmin  
+grant create database on account to role admin; -- Atul ran this command from accountadmin  
 
 CREATE DATABASE assignment_db;
 ```
@@ -112,7 +112,7 @@ CREATE TABLE employee (
 );
 ```
 #### Approach : 
-+ I have use [CSV GENERATOR](https://extendsclass.com/csv-generator.html) to create the data .
++ Atul have use [CSV GENERATOR](https://extendsclass.com/csv-generator.html) to create the data .
 
 ###  Q7 Also, create a variant version of this dataset ( 5 ).
 
@@ -158,7 +158,7 @@ Reference - [Variant Data Type](https://docs.snowflake.com/en/sql-reference/data
  create stage my_internal_stage    
  file_format = my_csv_format;
  
- GRANT ALL ON INTEGRATION s3_integration TO ROLE admin; -- I ran this command from ACCOUNTADMIN to provide all the privileges to `ADMIN` role.
+ GRANT ALL ON INTEGRATION s3_integration TO ROLE admin; -- Atul ran this command from ACCOUNTADMIN to provide all the privileges to `ADMIN` role.
  
  -- storage integration with aws 
  
@@ -184,7 +184,7 @@ OUTPUT -> While making trust relationship between aws and snowflake
 <img width="801" alt="Screenshot 2023-03-29 at 1 54 16 PM" src="https://user-images.githubusercontent.com/122472996/228473289-d73e215e-704f-4cf0-8adb-ff668a67b31e.png">
 
 #### Approach :
-+ First I have created csv file format with name `my_csv_format`
++ First Atul have created csv file format with name `my_csv_format`
 + Then created the internal stage with name `my_internal_stage`
 + Then created the s3_integration in accountadmin and then granted all privileges to the `ADMIN`
 + Then created trust realtion between aws and snowflake by updating the `Trust Relationship` in the role from where we copied the arn into the               s3_integration.
